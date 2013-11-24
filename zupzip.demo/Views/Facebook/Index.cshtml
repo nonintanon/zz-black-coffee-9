@@ -1,0 +1,15 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>ZZ BC#9 Skills Update v2 | Attending</h2>
+
+<div class="clearfix">
+    @foreach (var item in Model.data) {
+        <img style="margin: 0px; padding: 0px; float: left; width: 80px; height: 80px;" title="@item.name" src="https://graph.facebook.com/@item.id/picture?width=80&height=80" alt="@item.name" />
+    }
+</div>
+
+<h3>Original Response</h3>
+<pre>@Model</pre>

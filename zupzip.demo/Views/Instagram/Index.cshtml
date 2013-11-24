@@ -1,0 +1,16 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Instagram Feeds</h2>
+<div class="clearfix">
+    @foreach (var item in @Model.data) {
+        if (item.type == "image") {
+            <img src="@item.images.thumbnail.url" style="float: left; margin: 0px 0px 0px 0px; width: 190px; height: 190px;" />
+        }
+    }
+</div>
+
+<h3>Original Response</h3>
+<pre>@Model</pre>

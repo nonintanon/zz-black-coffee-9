@@ -1,0 +1,21 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Twitter Timeline</h2>
+
+<div class="clearfix">
+    @foreach (var tweet in Model) {
+        <div style="padding: 20px;" class="clearfix">
+            <img src="@tweet.user.profile_image_url" style="float: left; margin-right: 20px; width: 48px;" />
+            <div style="float: left; width: 800px;">
+                <span style="display: block; font-size: 120%;">@tweet.text</span>
+                <span style="display: block; color: #999;">@@@tweet.user.screen_name | @tweet.created_at</span>
+            </div>
+        </div>
+    }
+</div>
+
+<h3>Original Response</h3>
+<pre>@Model</pre>

@@ -1,0 +1,43 @@
+﻿@*<div>
+    @{ var user = HttpContext.Current.GetOwinContext().Authentication.User; }
+    <ul>
+        <li>User has @user.Claims.Count() claims</li>
+        <li>User Identities = @user.Identities.Count()</li>
+        <li>User Identity = @user.Identity.ToString()</li>
+        <li>
+            <ol>
+                @foreach (var claim in user.Claims) {
+                    <li>
+                        @claim.ToString()
+                        <table style="font-size: 9px;">
+                            <tr>
+                                <td style="width: 100px;">Issuer</td>
+                                <td>@claim.Issuer</td>
+                            </tr>
+                            <tr>
+                                <td>Original Issuer</td>
+                                <td>@claim.OriginalIssuer</td>
+                            </tr>
+                            <tr>
+                                <td>Subject</td>
+                                <td>@claim.Subject</td>
+                            </tr>
+                            <tr>
+                                <td>Type</td>
+                                <td>@claim.Type</td>
+                            </tr>
+                            <tr>
+                                <td>Value</td>
+                                <td>@claim.Value</td>
+                            </tr>
+                            <tr>
+                                <td>Value Type</td>
+                                <td>@claim.ValueType</td>
+                            </tr>
+                        </table>
+                    </li>
+                }
+            </ol>
+        </li>
+    </ul>
+</div>*@
