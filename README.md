@@ -1,7 +1,7 @@
 USAGE
 ---
 
-You'll only need to change appSetting value in web.config file.
+You'll only need to change app setting values in web.config file.
 
 ```<add key="TwitterConsumerKey" value="[YOUR_TWITTER_CONSUMER_KEY]"/>```
 ```<add key="TwitterConsumerSecret" value="[YOUR_TWITTER_CONSUMER_SECRET]"/>```
